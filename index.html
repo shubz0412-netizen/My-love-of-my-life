@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <title>For Dristhika ❤️</title> 
+  <style> 
+    body { margin: 0; overflow: hidden; font-family: 'Comic Sans MS', cursive, sans-serif; background: linear-gradient(135deg, #ffb6d9, #ffcce6, #ffd6eb); height: 100vh; } 
+    .center-box { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; background: rgba(255, 255, 255, 0.88); padding: 30px; border-radius: 25px; width: 80%; max-width: 650px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); z-index: 10; } 
+    h1 { color: #ff2e88; margin-bottom: 10px; } 
+    .love-text { font-size: 18px; color: #444; line-height: 1.6; } 
+    .floating-love { position: absolute; width: 100%; text-align: center; top: 20px; font-size: 30px; font-weight: bold; color: #ff0077; animation: floatText 6s ease-in-out infinite; z-index: 5; text-shadow: 0 0 10px rgba(255,255,255,0.8); } 
+    @keyframes floatText { 0% { transform: translateY(0); } 50% { transform: translateY(-22px); } 100% { transform: translateY(0); } } 
+    .photo { margin-top: 20px; } 
+    .photo img { width: 230px; height: 230px; object-fit: cover; border-radius: 22px; border: 6px solid #ff6fb0; box-shadow: 0 8px 20px rgba(0,0,0,0.25); } 
+    .falling { position: absolute; top: -50px; font-size: 30px; animation: fall linear forwards; user-select: none; pointer-events: none; } 
+    @keyframes fall { to { transform: translateY(110vh) rotate(360deg); opacity: 0.95; } } 
+    .music-note { position: absolute; bottom: 10px; right: 15px; font-size: 14px; color: #aa336a; background: rgba(255,255,255,0.7); padding: 6px 10px; border-radius: 12px; z-index: 20; } 
+  </style> 
+</head> 
+<body> 
+  <!-- Background Music --> 
+  <audio id="bgMusic" loop muted> 
+    <source src="lovers.mp3" type="audio/mpeg"> 
+  </audio> 
+  <button onclick="document.getElementById('bgMusic').play(); document.getElementById('bgMusic').muted=false; this.style.display='none';" style="position:absolute;top:10px;right:10px;padding:10px;background:                                                                                               
+  <div class="floating-love">I Love You Forever Dristhika 💖</div> 
+  <div class="center-box"> 
+    <h1>Happy Valentine’s Day Dristhika ❤️</h1> 
+    <div class="love-text"> My beautiful Dristhika,<br><br> I want you to know how deeply I love you and how much I appreciate you every single day. You bring warmth to my heart, peace to my mind, and happiness to my life. Your smile is my favorite sight, your voice is my favorite sound, and your love is my favorite gift.<br><br> Thank you for your kindness, your patience, your laughter, and your love. I am so grateful to have you, and I will always cherish you.<br><br> Forever yours — with all my heart. 💗 </div> 
+    <div class="photo"> 
+      <img src="dristhika.jpg" alt="Dristhika Photo" /> 
+    </div> 
+  </div> 
+  <div class="music-note">♪ Lovers — Anna of the North ♪</div> 
+  <script> 
+    const items = ["💖","💗","💕","💘","💞","💓","🥑","🥑","🥑"]; 
+    function createFalling() { 
+      const el = document.createElement("div"); 
+      el.className = "falling"; 
+      el.innerText = items[Math.floor(Math.random() * items.length)]; 
+      el.style.left = Math.random() * window.innerWidth + "px"; 
+      el.style.animationDuration = (4 + Math.random() * 4) + "s"; 
+      el.style.fontSize = (24 + Math.random() * 26) + "px"; 
+      document.body.appendChild(el); 
+      setTimeout(() => { el.remove(); }, 9000); 
+    } 
+    setInterval(createFalling, 220); 
+  </script> 
+</body> 
+</html>
